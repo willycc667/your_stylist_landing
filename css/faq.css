@@ -1,0 +1,113 @@
+/*
+  ========================================
+  == REGION 8: Sección 6 - FAQ (Preguntas Frecuentes)
+  ========================================
+*/
+.sec-6-bg {
+  background-image: url('../img/bg-pattern-sec-06.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sec-6-container {
+  padding: 60px 16px;
+  color: #fff;
+}
+
+.sec-6-title {
+  /*
+    Se ajusta el tamaño de fuente a 5rem.
+    Considerando la fuente base del navegador (16px), esto es equivalente a 80px (16 * 5 = 80).
+  */
+  font-size: 5rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.2;
+}
+.sec-6-title span {
+  color: #e4c34a;
+}
+
+.sec-6-description {
+  color: #ddd;
+  font-size: 1rem;
+  max-width: 420px;
+}
+
+.sec-6-accordion .accordion-item {
+  background-color: transparent;
+  border: none;
+  /*
+    Se aumenta el margen inferior a 20px para dar más espacio
+    entre cada pregunta del acordeón.
+  */
+  margin-bottom: 20px;
+}
+
+.sec-6-accordion .accordion-button {
+  background-color: #1f1f1f;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sec-6-accordion .accordion-button::after {
+  display: none;
+}
+
+.sec-6-icon {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #746868;
+  content: '+';
+}
+.accordion-button.collapsed .sec-6-icon::before {
+  content: '+';
+}
+.accordion-button:not(.collapsed) .sec-6-icon::before {
+  content: '−';
+}
+
+.sec-6-accordion .accordion-body {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ddd;
+  padding: 15px 20px;
+  border-radius: 0 0 12px 12px;
+  font-size: 0.95rem;
+}
+
+.sec-6-store-img {
+  width: 140px;
+  height: auto;
+}
+
+@media (max-width: 767.98px) {
+  .sec-6-title {
+    /*
+      Se reduce el tamaño de la fuente en móviles al equivalente de ~45px.
+      (16px * 2.8 = 44.8px).
+    */
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  .sec-6-description {
+    margin: 0 auto;
+  }
+}
+
+/*
+  ========================================
+  == ENDREGION 8: Sección 6 - FAQ
+  ========================================
+*/

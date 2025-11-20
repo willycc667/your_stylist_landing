@@ -1,0 +1,334 @@
+/*
+  ========================================
+  == REGION 4: Sección 2 - Cómo Funciona (Mapa y Servicios)
+  == Aplica a la sección con id="section2"
+  ========================================
+*/
+
+/* Estilos base de la sección y su fondo decorativo */
+.sec-3-section {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  background: linear-gradient(180deg, var(--sec-3-bg-1) 0%, var(--sec-3-bg-2) 100%);
+  overflow: hidden;
+  padding: 56px 0;
+}
+
+.sec-3-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(120deg, rgba(225, 183, 78, 0.04) 1px, transparent 1px),
+    linear-gradient(30deg, rgba(225, 183, 78, 0.03) 1px, transparent 1px);
+  background-size: 300px 300px;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.sec-3-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header: Título y subtítulo */
+.sec-3-header {
+  padding-bottom: 18px;
+}
+.sec-3-title {
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  color: #fff;
+  font-size: 64px; /* desktop */
+  line-height: 0.98;
+  letter-spacing: -0.5px;
+}
+.sec-3-title .sec-3-highlight {
+  display: block;
+  color: var(--sec-3-gold);
+  font-weight: 700;
+}
+
+.sec-3-subtitle {
+  color: var(--sec-3-sub);
+  font-size: 16px;
+  margin: 6px 0 0 0;
+}
+
+/* Layout para Escritorio: Mapa a la izquierda, servicios a la derecha */
+.sec-3-row {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+.sec-3-left {
+  flex: 1 1 65%;
+  min-width: 320px;
+}
+.sec-3-right {
+  flex: 0 0 35%;
+  min-width: 300px;
+}
+
+.sec-2-map {
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+  border: 6px solid rgba(0, 0, 0, 0.25);
+}
+.sec-3-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Tarjeta de perfil del estilista */
+.sec-3-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.sec-3-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex: 0 0 56px;
+  border: 3px solid rgba(225, 183, 78, 0.9);
+}
+.sec-3-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.sec-3-profile-info {
+  flex: 1;
+}
+.sec-3-profile-name {
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+}
+.sec-3-profile-sub {
+  font-size: 13px;
+  color: var(--sec-3-muted);
+  margin: 2px 0 0;
+}
+.sec-3-profile-rating {
+  color: var(--sec-3-gold);
+  font-weight: 700;
+  margin-left: 8px;
+  flex: 0 0 auto;
+}
+
+/* Lista de servicios */
+.sec-3-services {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 14px;
+}
+.sec-3-service {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border-radius: 12px;
+  border: 2px solid rgba(225, 183, 78, 0.08);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: visible;
+}
+.sec-3-thumb {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid rgba(225, 183, 78, 0.95);
+}
+.sec-3-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sec-3-service-text {
+  flex: 1;
+  color: var(--sec-3-muted);
+  font-size: 13px;
+}
+.sec-3-service-text .sec-3-service-title {
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.sec-3-service-meta {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 4px;
+}
+
+.sec-3-stars {
+  color: var(--sec-3-gold);
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.sec-3-add {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 46px;
+  margin-left: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6), 0 0 10px rgba(225, 183, 78, 0.08) inset;
+}
+.sec-3-add svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--sec-3-gold);
+}
+
+/* Layout para Móviles */
+.sec-3-mobile {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .sec-3-container {
+    /*
+      Se unifica el padding lateral a 16px en móviles para una mejor estética.
+      Esto aplica a la sección 2.
+    */
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .sec-3-title {
+    font-size: 34px;
+    text-align: center;
+  }
+  .sec-3-title .sec-3-highlight {
+    color: var(--sec-3-gold);
+    display: inline;
+  }
+  .sec-3-subtitle {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .sec-3-row {
+    display: none;
+  }
+  .sec-3-mobile {
+    display: block;
+  }
+
+  .sec-3-mobile-map {
+    width: 100%;
+    margin: 14px 0;
+  }
+  .sec-3-mobile-map img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    border: 4px solid rgba(0, 0, 0, 0.25);
+  }
+
+  .sec-3-mobile-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+  .sec-3-mobile-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(225, 183, 78, 0.9);
+  }
+  .sec-3-mobile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .sec-3-mobile-name {
+    font-weight: 700;
+    color: #fff;
+    font-size: 15px;
+  }
+  .sec-3-mobile-sub {
+    font-size: 13px;
+    color: var(--sec-3-muted);
+  }
+
+  .sec-3-service {
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  .sec-3-thumb {
+    width: 64px;
+    height: 64px;
+    flex: 0 0 64px;
+    border-radius: 10px;
+  }
+  .sec-3-add {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .sec-3-services-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 8px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec-3-title {
+    font-size: 28px;
+  }
+  .sec-3-thumb {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+  }
+  .sec-3-add {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/*
+  ========================================
+  == ENDREGION 4: Sección 2 - Cómo Funciona (Mapa y Servicios)
+  ========================================
+*/
