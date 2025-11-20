@@ -807,79 +807,8 @@ body {
   == REGION 6: Sección 4 - Opciones de Pagos
   ========================================
 */
-.sec-4-bg {
-  position: relative;
-  background: linear-gradient(to top, #000 0%, #111 40%, #1a1a1a 100%);
-  background-image: url('img/sec-4-lines-bg.png');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  overflow: hidden;
-  min-height: 650px; /* Altura base desktop */
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
 
-.sec-4-phone {
-  position: absolute;
-  bottom: 0; /* Pegada al fondo de la sección */
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 520px;
-  height: auto;
-  z-index: 2;
-  pointer-events: none;
-}
 
-@media (min-width: 1200px) {
-  .sec-4-bg {
-    min-height: 700px;
-  }
-  .sec-4-phone {
-    max-width: 580px;
-    bottom: -10px; /* sobresale un poco */
-  }
-}
-
-@media (max-width: 991.98px) {
-  .sec-4-bg {
-    text-align: center;
-    min-height: auto;
-    padding-bottom: 280px; /* espacio para el teléfono */
-  }
-  .sec-4-phone {
-    max-width: 420px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .sec-4-bg {
-    padding-top: 3rem;
-    padding-bottom: 0px;
-  }
-  .sec-4-phone {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 300px;
-  }
-}
-
-/*
-  ========================================
-  == ENDREGION 6: Sección 4 - Opciones de Pagos
-  ========================================
-*/
-
-/*
-  ========================================
-  == REGION 8: Sección 6 - FAQ (Preguntas Frecuentes)
-  ========================================
-*/
 .sec-6-bg {
   background-image: url('img/bg-pattern-sec-06.png');
   background-position: center center;
