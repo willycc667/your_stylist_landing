@@ -1,0 +1,207 @@
+/*
+  ========================================
+  == Section 7 Styles
+  ========================================
+*/
+
+.section-7-container {
+  /* Background image path relative to css/ directory */
+  background: url('../img/background-seven.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  /* Ensure it overrides the default fullscreen background */
+  background-blend-mode: normal;
+}
+
+.section-7-hero-banner {
+  /* Remove background from here as it is now on the container */
+  min-height: 100vh; /* Ensure content is centered vertically if needed, or let flexbox handle it */
+  width: 100%;
+  padding: 4rem 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.section-7-hero-banner::after {
+  /* Move overlay to container if needed, or keep here but it only covers banner. 
+     If we want overlay on the whole background, it should be on container. 
+     Let's move the overlay to the container as well to match "background occupies whole section".
+  */
+  content: none;
+}
+
+.section-7-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* Darker overlay for better text contrast */
+  z-index: 1;
+}
+
+.section-7-hero-banner .container,
+.section-7-hero-banner .text-center {
+  position: relative;
+  z-index: 3; /* Higher than overlay */
+}
+
+.section-7-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4rem;
+  line-height: 1.2;
+  color: #fff;
+  font-weight: 400;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.section-7-highlight {
+  color: #e6b71c; /* Gold color */
+  display: block; /* Ensure it breaks to new line if needed or just styling */
+  margin-top: 0.5rem;
+}
+
+/* Mobile buttons in banner (hidden on desktop) */
+.section-7-btn-gold {
+  background-color: #e6b71c;
+  color: #000;
+  border-radius: 30px;
+  padding: 0.8rem 2.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.section-7-btn-gold:hover {
+  background-color: #d4a714;
+  color: #000;
+}
+
+/*
+  Footer Styles
+*/
+.section-7-footer-banner {
+  background-color: #000;
+  color: #fff;
+  padding: 0.1rem 1.25rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.section-7-logo-box {
+  /* Logo container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-7-logo-footer {
+  height: 80px; /* Adjust logo size */
+  width: auto;
+}
+
+.section-7-social-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+/* Vertical divider and links */
+.section-7-links-vertical {
+  position: relative;
+  padding-left: 3rem;
+  margin-left: 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.3); /* Vertical line */
+}
+
+.section-7-link-item {
+  margin: 8px 0;
+}
+
+.section-7-footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.section-7-footer-link:hover {
+  color: #e6b71c;
+}
+
+/* Store buttons in footer */
+.section-7-store-btn {
+  height: 48px;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.section-7-store-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .section-7-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-7-container {
+    height: auto !important; /* Allow section to grow beyond 100vh if needed */
+    min-height: 100vh;
+    justify-content: flex-start !important; /* Override Bootstrap justify-content-center */
+  }
+
+  .section-7-hero-banner {
+    min-height: auto; /* Let content dictate height, or keep min-height if needed */
+    padding-top: 8rem; /* More space from top */
+    padding-bottom: 10rem; /* Space for the footer banner */
+    align-items: flex-start;
+  }
+
+  .section-7-hero-banner .section-7-store-btn {
+    height: 24px;
+  }
+  
+  .section-7-title {
+    font-size: 2rem;
+  }
+
+  .section-7-links-vertical {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-7-social-title {
+    margin-left: 0;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .section-7-footer-banner .row > div {
+    text-align: center;
+    justify-content: center !important;
+    flex-direction: column;
+  }
+  
+  .section-7-store-btn {
+    margin: 5px;
+  }
+}
