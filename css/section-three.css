@@ -1,0 +1,235 @@
+/*
+  ========================================
+  == REGION 5: Sección 3 - Cómo Funciona (Galería de Teléfonos)
+  == Aplica a la sección con id="section3"
+  ========================================
+*/
+
+:root {
+  --sec-3-text: #ffffff;
+  --sec-3-subtext: #b0b0b0;
+  --sec-3-gold: #d4af37;
+}
+
+#section3 {
+  background: url('../img/background-four.png') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: normal;
+  color: var(--sec-3-text);
+  position: relative;
+  overflow: hidden;
+}
+
+#section3::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(120deg, rgba(225, 183, 78, 0.06) 1px, transparent 1px),
+    linear-gradient(30deg, rgba(225, 183, 78, 0.04) 1px, transparent 1px);
+  background-size: 200px 200px;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* Header: Título y subtítulo */
+.sec-3-header {
+  text-align: center;
+  padding-top: 38px;
+  padding-bottom: 28px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sec-3-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: var(--sec-3-text);
+  margin: 0;
+  line-height: 1.2;
+  font-size: 60px; /* desktop */
+  letter-spacing: 0.2px;
+}
+.sec-3-title .sec-3-highlight {
+  color: var(--sec-3-gold);
+  display: block;
+  margin-top: 6px;
+  font-weight: 400;
+}
+.sec-3-subtitle {
+  color: var(--sec-3-gold);
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+/* Layout para Escritorio: Galería de teléfonos */
+.sec-3-phones-row {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 28px 10px 20px;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sec-3-phone-wrap {
+  width: 170px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.sec-3-phone-frame {
+  width: 210px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+}
+.sec-3-phone-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.sec-3-phone-caption {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--sec-3-text);
+}
+
+/* Teléfono central destacado */
+.sec-3-phone-wrap:nth-child(3) .sec-3-phone-frame {
+  transform: translateY(-6px);
+  width: 230px;
+  height: 480px;
+}
+.sec-3-phone-wrap:nth-child(3) .sec-3-phone-caption {
+  font-size: 15px;
+}
+
+/* Layout para Móviles: Lista de "píldoras" y carrusel de teléfonos */
+.sec-3-mobile-list {
+  display: none;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px 14px;
+  width: 100%;
+}
+.sec-3-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 2px solid rgba(225, 183, 78, 0.95);
+  background: transparent;
+  color: var(--sec-3-text);
+  font-weight: 600;
+  width: 100%;
+}
+.sec-3-pill .sec-3-pill-text {
+  text-align: left;
+}
+.sec-3-pill .sec-3-pill-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.sec-3-mobile-phones {
+  display: none;
+  padding: 16px 12px 36px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 12px;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+.sec-3-mobile-phones .sec-3-phone-thumb {
+  flex: 0 0 auto;
+  width: 160px;
+  height: 340px;
+  margin-right: 30px;
+  overflow: visible;
+  scroll-snap-align: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
+}
+.sec-3-mobile-phones img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .sec-3-title {
+    font-size: 28px;
+    text-align: center;
+  }
+  .sec-3-title .sec-3-highlight {
+    display: inline;
+    color: var(--sec-3-gold);
+  }
+  .sec-3-subtitle {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .sec-3-phones-row {
+    display: none;
+  }
+  .sec-3-mobile-list {
+    display: flex;
+  }
+  .sec-3-mobile-phones {
+    display: flex;
+  }
+
+  .sec-3-pill {
+    width: 100%;
+    border-width: 2.5px;
+    background: transparent;
+  }
+
+  .sec-3-phone-caption {
+    display: none;
+  }
+
+  #section3 {
+    min-height: 100vh;
+    padding-bottom: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .sec-3-mobile-list,
+  .sec-3-mobile-phones {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec-3-pill {
+    padding: 10px 14px;
+  }
+  .sec-3-mobile-phones .sec-3-phone-thumb {
+    width: 110px;
+    height: 220px;
+  }
+}
