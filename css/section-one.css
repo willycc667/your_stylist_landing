@@ -1,0 +1,35 @@
+
+.section-1-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.section-1-title span {
+  color: #e1b74e;
+}
+
+/* Phone Mockup Positioning */
+.phone-mockup-web {
+  position: absolute;
+  bottom: 10%;
+  left: 75%;
+  transform: translateX(-50%);
+  max-height: 140vh;
+  width: auto;
+  z-index: 1; /* Behind the footer */
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .section-1-title {
+    font-size: 2.5rem;
+  }
+  
+  /* Reset absolute positioning for mobile if needed, 
+     but the HTML hides .phone-mockup-web on mobile anyway 
+     and shows .phone-mockup instead. */
+}

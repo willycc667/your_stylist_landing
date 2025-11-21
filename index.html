@@ -21,6 +21,8 @@
     <link href="css/section-five.css" rel="stylesheet" />
     <link href="css/section-four.css" rel="stylesheet" />
     <link href="css/section-three.css" rel="stylesheet" />
+    <link href="css/section-two.css" rel="stylesheet" />
+    <link href="css/section-one.css" rel="stylesheet" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -54,13 +56,13 @@
     </nav>
 
     <!-- SECCIÓN 1: HERO -->
-    <section id="section1" class="fullscreen d-flex flex-column text-light">
+    <section id="section1" class="fullscreen fullscreen-section-one section-1-container d-flex flex-column text-light">
       <div class="container flex-grow-1 d-flex align-items-center">
         <div class="row align-items-center w-100">
           <!-- Texto -->
           <div class="col-lg-6">
-            <h1 class="fw-bold display-5">
-              <span class="text-gold">Impulsa</span>
+            <h1 class="section-1-title">
+              <span>Impulsa</span>
               tu negocio
               <br />
               de belleza, sin límites
@@ -130,206 +132,216 @@
     </section>
 
     <!-- SECCIONES ADICIONALES -->
-    <section id="section2" class="fullscreen bg-dark text-light d-flex align-items-center justify-content-center">
-      <!-- Header -->
-      <div class="sec-3-header">
-        <h2 class="sec-3-title">
-          ¿Cómo funciona
-          <span class="sec-3-highlight">Tu Estilista?</span>
-        </h2>
-        <p class="sec-3-subtitle">Crea tu perfil y empieza a impulsar tu negocio en minutos.</p>
-      </div>
-
-      <!-- DESKTOP GRID: mapa (izq) + perfil + lista servicios (der) -->
-      <div class="sec-3-row d-none d-lg-flex">
-        <!-- Left: mapa grande -->
-        <div class="sec-3-left">
-          <div class="sec-3-map" role="img" aria-label="Mapa de ejemplo">
-            <!-- placeholder de mapa manteniendo proporción similar al diseño -->
-            <img src="https://placehold.co/900x420/ffffff/000000?text=Mapa+placeholder" alt="Mapa placeholder" />
-          </div>
+    <section id="section2" class="sec-2-section fullscreen text-light d-flex align-items-center justify-content-center">
+      <div class="sec-2-container">
+        <!-- Header (Mobile Only) -->
+        <div class="sec-2-header d-lg-none">
+          <h2 class="sec-2-title">
+            Encuentra tu
+            <br />
+            <span class="sec-2-highlight">estilista favorito</span>
+          </h2>
         </div>
 
-        <!-- Right: perfil + lista -->
-        <aside class="sec-3-right">
-          <div class="sec-3-profile">
-            <div class="sec-3-avatar" aria-hidden="true">
-              <img src="https://placehold.co/128x128/ffffff/000000?text=A" alt="avatar" />
+        <!-- DESKTOP GRID: mapa (izq) + perfil + lista servicios (der) -->
+        <div class="sec-2-row d-none d-lg-flex">
+          <!-- Left: mapa grande -->
+          <div class="sec-2-left">
+            <!-- Desktop Header -->
+            <div class="sec-2-header">
+              <h2 class="sec-2-title">
+                Encuentra tu
+                <br />
+                <span class="sec-2-highlight">estilista favorito</span>
+              </h2>
             </div>
-            <div class="sec-3-profile-info">
-              <p class="sec-3-profile-name">Akemi Julissa</p>
-              <p class="sec-3-profile-sub">Beauty Study</p>
+            <div class="sec-2-map" role="img" aria-label="Mapa de ubicación">
+              <!-- placeholder de mapa manteniendo proporción similar al diseño -->
+              <img src="https://placehold.co/900x420/ffffff/000000?text=Mapa+placeholder" alt="Mapa placeholder" />
             </div>
-            <div class="sec-3-profile-rating" aria-hidden="true">★ 5.0</div>
           </div>
 
-          <div class="sec-3-services" role="list">
-            <!-- service 1 -->
-            <div class="sec-3-service" role="listitem">
-              <div class="sec-3-thumb" aria-hidden="true">
+          <!-- Right: perfil + lista -->
+          <aside class="sec-2-right">
+            <div class="sec-2-profile">
+              <div class="sec-2-avatar" aria-hidden="true">
+                <img src="https://placehold.co/128x128/ffffff/000000?text=A" alt="avatar" />
+              </div>
+              <div class="sec-2-profile-info">
+                <p class="sec-2-profile-name">Akemi Julissa</p>
+                <p class="sec-2-profile-sub">Beauty Study</p>
+              </div>
+              <div class="sec-2-profile-rating" aria-hidden="true">★ 5.0</div>
+            </div>
+
+            <div class="sec-2-services" role="list">
+              <!-- service 1 -->
+              <div class="sec-2-service" role="listitem">
+                <div class="sec-2-thumb" aria-hidden="true">
+                  <img src="https://placehold.co/140x140/ffffff/000000?text=Foto1" alt="thumb1" />
+                </div>
+                <div class="sec-2-service-text">
+                  <span class="sec-2-service-title">Manicura en Gel</span>
+                  <span class="sec-2-service-meta">
+                    Duración aproximada : 150 minutos
+                    <br />
+                    Aplicacion de esmalte en gel que ofrece un acabado brillante y curado bajo luz UV o LED
+                  </span>
+                  <div class="sec-2-stars" aria-hidden="true">★★★★★</div>
+                </div>
+                <div class="sec-2-add" role="button" aria-label="Agregar">
+                  <!-- plus icon -->
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- service 2 -->
+              <div class="sec-2-service" role="listitem">
+                <div class="sec-2-thumb" aria-hidden="true">
+                  <img src="https://placehold.co/140x140/ffffff/000000?text=Foto2" alt="thumb2" />
+                </div>
+                <div class="sec-2-service-text">
+                  <span class="sec-2-service-title">Baby Boomer</span>
+                  <span class="sec-2-service-meta">
+                    Duración aproximada : 45 minutos
+                    <br />
+                    Aplicacion de esmalte en gel que ofrece un acabado brillante y curado bajo luz UV o LED
+                  </span>
+                  <div class="sec-2-stars" aria-hidden="true">★★★★★</div>
+                </div>
+                <div class="sec-2-add" role="button" aria-label="Agregar">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- service 3 -->
+              <div class="sec-2-service" role="listitem">
+                <div class="sec-2-thumb" aria-hidden="true">
+                  <img src="https://placehold.co/140x140/ffffff/000000?text=Foto3" alt="thumb3" />
+                </div>
+                <div class="sec-2-service-text">
+                  <span class="sec-2-service-title">Baby Blaam</span>
+                  <span class="sec-2-service-meta">
+                    Duración aproximada : 45 minutos
+                    <br />
+                    Aplicacion de esmalte en gel que ofrece un acabado brillante y curado bajo luz UV o LED
+                  </span>
+                  <div class="sec-2-stars" aria-hidden="true">★★★★★</div>
+                </div>
+                <div class="sec-2-add" role="button" aria-label="Agregar">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- service 4 -->
+              <div class="sec-2-service" role="listitem">
+                <div class="sec-2-thumb" aria-hidden="true">
+                  <img src="https://placehold.co/140x140/ffffff/000000?text=Foto4" alt="thumb4" />
+                </div>
+                <div class="sec-2-service-text">
+                  <span class="sec-2-service-title">Acrílicos</span>
+                  <span class="sec-2-service-meta">
+                    Duración aproximada : 45 minutos
+                    <br />
+                    Aplicacion de esmalte en gel que ofrece un acabado brillante y curado bajo luz UV o LED
+                  </span>
+                  <div class="sec-2-stars" aria-hidden="true">★★★★★</div>
+                </div>
+                <div class="sec-2-add" role="button" aria-label="Agregar">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- MOBILE: mapa pequeño + perfil + stacked services -->
+        <div class="sec-2-mobile d-block d-lg-none">
+          <div class="sec-2-mobile-map">
+            <img src="https://placehold.co/800x320/ffffff/000000?text=Mapa+placeholder" alt="Mapa mobile" />
+          </div>
+
+          <div class="sec-2-mobile-profile">
+            <div class="sec-2-mobile-avatar">
+              <img src="https://placehold.co/128x128/ffffff/000000?text=A" alt="avatar mobile" />
+            </div>
+            <div>
+              <div class="sec-2-mobile-name">Akemi Julissa</div>
+              <div class="sec-2-mobile-sub">
+                Beauty Study •
+                <span style="color: var(--sec-2-gold)">★ 5.0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sec-2-services-mobile">
+            <!-- stacked service (mobile) -->
+            <div class="sec-2-service">
+              <div class="sec-2-thumb" aria-hidden="true">
                 <img src="https://placehold.co/140x140/ffffff/000000?text=Foto1" alt="thumb1" />
               </div>
-              <div class="sec-3-service-text">
-                <span class="sec-3-service-title">Manicura en Gel</span>
-                <span class="sec-3-service-meta">
-                  Duración aproximada: 150 minutos
+              <div class="sec-2-service-text">
+                <span class="sec-2-service-title">Manicura en Gel</span>
+                <span class="sec-2-service-meta">
+                  Duración aproximada : 150 min
                   <br />
-                  Aplicación de esmalte en gel que ofrece un acabado brillante y curado bajo luz UV o LED
+                  Aplicacion de esmalte en gel con acabado brillante.
                 </span>
-                <div class="sec-3-stars" aria-hidden="true">★★★★★</div>
+                <div class="sec-2-stars">★★★★★</div>
               </div>
-              <div class="sec-3-add" role="button" aria-label="Agregar">
-                <!-- plus icon -->
+              <div class="sec-2-add" role="button" aria-label="Agregar">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
                 </svg>
               </div>
             </div>
 
-            <!-- service 2 -->
-            <div class="sec-3-service" role="listitem">
-              <div class="sec-3-thumb" aria-hidden="true">
+            <div class="sec-2-service">
+              <div class="sec-2-thumb" aria-hidden="true">
                 <img src="https://placehold.co/140x140/ffffff/000000?text=Foto2" alt="thumb2" />
               </div>
-              <div class="sec-3-service-text">
-                <span class="sec-3-service-title">Baby Boomer</span>
-                <span class="sec-3-service-meta">
-                  Duración aproximada: 45 minutos
+              <div class="sec-2-service-text">
+                <span class="sec-2-service-title">Baby Boomer</span>
+                <span class="sec-2-service-meta">
+                  Duración aproximada : 45 min
                   <br />
-                  Aplicación de esmalte en gel que ofrece un acabado brillante y curado bajo luz UV o LED
+                  Aplicacion de esmalte en gel con acabado brillante.
                 </span>
-                <div class="sec-3-stars" aria-hidden="true">★★★★★</div>
+                <div class="sec-2-stars">★★★★★</div>
               </div>
-              <div class="sec-3-add" role="button" aria-label="Agregar">
+              <div class="sec-2-add" role="button" aria-label="Agregar">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
                 </svg>
               </div>
             </div>
 
-            <!-- service 3 -->
-            <div class="sec-3-service" role="listitem">
-              <div class="sec-3-thumb" aria-hidden="true">
+            <div class="sec-2-service">
+              <div class="sec-2-thumb" aria-hidden="true">
                 <img src="https://placehold.co/140x140/ffffff/000000?text=Foto3" alt="thumb3" />
               </div>
-              <div class="sec-3-service-text">
-                <span class="sec-3-service-title">Baby Bloom</span>
-                <span class="sec-3-service-meta">
-                  Duración aproximada: 45 minutos
+              <div class="sec-2-service-text">
+                <span class="sec-2-service-title">Baby Blaam</span>
+                <span class="sec-2-service-meta">
+                  Duración aproximada : 45 min
                   <br />
-                  Aplicación de esmalte en gel que ofrece un acabado brillante y curado bajo luz UV o LED
+                  Aplicacion de esmalte en gel con acabado brillante.
                 </span>
-                <div class="sec-3-stars" aria-hidden="true">★★★★★</div>
+                <div class="sec-2-stars">★★★★★</div>
               </div>
-              <div class="sec-3-add" role="button" aria-label="Agregar">
+              <div class="sec-2-add" role="button" aria-label="Agregar">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
                 </svg>
               </div>
-            </div>
-
-            <!-- service 4 -->
-            <div class="sec-3-service" role="listitem">
-              <div class="sec-3-thumb" aria-hidden="true">
-                <img src="https://placehold.co/140x140/ffffff/000000?text=Foto4" alt="thumb4" />
-              </div>
-              <div class="sec-3-service-text">
-                <span class="sec-3-service-title">Acrílicos</span>
-                <span class="sec-3-service-meta">
-                  Duración aproximada: 45 minutos
-                  <br />
-                  Aplicación de esmalte en gel que ofrece un acabado brillante y curado bajo luz UV o LED
-                </span>
-                <div class="sec-3-stars" aria-hidden="true">★★★★★</div>
-              </div>
-              <div class="sec-3-add" role="button" aria-label="Agregar">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </div>
-
-      <!-- MOBILE: mapa pequeño + perfil + stacked services -->
-      <div class="sec-3-mobile d-block d-lg-none">
-        <div class="sec-3-mobile-map">
-          <img src="https://placehold.co/800x320/ffffff/000000?text=Mapa+placeholder" alt="Mapa mobile" />
-        </div>
-
-        <div class="sec-3-mobile-profile">
-          <div class="sec-3-mobile-avatar">
-            <img src="https://placehold.co/128x128/ffffff/000000?text=A" alt="avatar mobile" />
-          </div>
-          <div>
-            <div class="sec-3-mobile-name">Akemi Julissa</div>
-            <div class="sec-3-mobile-sub">
-              Beauty Study •
-              <span style="color: var(--sec-3-gold)">★ 5.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="sec-3-services-mobile">
-          <!-- stacked service (mobile) -->
-          <div class="sec-3-service">
-            <div class="sec-3-thumb" aria-hidden="true">
-              <img src="https://placehold.co/140x140/ffffff/000000?text=Foto1" alt="thumb1" />
-            </div>
-            <div class="sec-3-service-text">
-              <span class="sec-3-service-title">Manicura en Gel</span>
-              <span class="sec-3-service-meta">
-                Duración aproximada: 45 min
-                <br />
-                Aplicación de esmalte en gel con acabado brillante.
-              </span>
-              <div class="sec-3-stars">★★★★★</div>
-            </div>
-            <div class="sec-3-add" role="button" aria-label="Agregar">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
-              </svg>
-            </div>
-          </div>
-
-          <div class="sec-3-service">
-            <div class="sec-3-thumb" aria-hidden="true">
-              <img src="https://placehold.co/140x140/ffffff/000000?text=Foto2" alt="thumb2" />
-            </div>
-            <div class="sec-3-service-text">
-              <span class="sec-3-service-title">Manicura en Gel</span>
-              <span class="sec-3-service-meta">
-                Duración aproximada: 45 min
-                <br />
-                Aplicación de esmalte en gel con acabado brillante.
-              </span>
-              <div class="sec-3-stars">★★★★★</div>
-            </div>
-            <div class="sec-3-add" role="button" aria-label="Agregar">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
-              </svg>
-            </div>
-          </div>
-
-          <div class="sec-3-service">
-            <div class="sec-3-thumb" aria-hidden="true">
-              <img src="https://placehold.co/140x140/ffffff/000000?text=Foto3" alt="thumb3" />
-            </div>
-            <div class="sec-3-service-text">
-              <span class="sec-3-service-title">Manicura en Gel</span>
-              <span class="sec-3-service-meta">
-                Duración aproximada: 45 min
-                <br />
-                Aplicación de esmalte en gel con acabado brillante.
-              </span>
-              <div class="sec-3-stars">★★★★★</div>
-            </div>
-            <div class="sec-3-add" role="button" aria-label="Agregar">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2h5z" />
-              </svg>
             </div>
           </div>
         </div>

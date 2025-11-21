@@ -91,14 +91,15 @@ body {
   == REGION 3: Sección 1 - Hero
   ========================================
 */
-.fullscreen-section-one {
+.fullscreen.fullscreen-section-one {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 30%, rgba(80, 50, 0, 0.85) 100%);
-  background-image: url('img/background.png'); /* <- tu imagen PNG aquí */
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
+  /* Combine image and gradient. Image is on top. */
+  background: 
+    url('img/background-one.png') center / cover no-repeat,
+    url('img/background.png') center / cover no-repeat,
+    linear-gradient(90deg, rgba(0, 0, 0, 0.95) 30%, rgba(80, 50, 0, 0.85) 100%);
+  background-blend-mode: normal;
   position: relative;
 }
 
@@ -106,7 +107,6 @@ body {
   height: 100vh;
   width: 100%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 30%, rgba(80, 50, 0, 0.85) 100%);
-  background-image: url('img/background.png'); /* <- tu imagen PNG aquí */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -129,9 +129,7 @@ body {
   transition: transform 0.4s ease;
 }
 
-.phone-mockup-web:hover {
-  transform: translateY(-10px);
-}
+
 
 .phone-mockup {
   max-height: 500px;
